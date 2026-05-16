@@ -43,7 +43,7 @@
     val emal : String
 //)
 ///ejrcicio 4
-fun main() {
+//fun main() {
     val student = Student (
     id = 1,
     name = "Luis",
@@ -64,10 +64,93 @@ fun main() {
     else{
         "Inactivo"
     }
-}
-data class Student (
+//}
+//data class Student (
     val id : Long,
     val name : String,
     val emal : String,
     val grade : int
     val isActive : Boolean
+///ejercicio 5  
+data class Student (
+    val id : Long,
+    val name : String,
+    val emal : String,
+    val grade : int
+    val isActive : Boolean 
+fun main() {
+    val student = Student (
+    id = 1,
+    name = "Luis",
+    emanil = "luisval@gmail.com"    
+    grade = 8,
+    isActive = true    
+    )
+    val student = Student (
+    id = 2,
+    name = "Luisa",
+    emanil = "luisaval@gmail.com"    
+    grade = 9,
+    isActive = true    
+    )
+    val student = Student (
+    id = 3,
+    name = "Carlos",
+    emanil = "Carlosval@gmail.com"    
+    grade = 4,
+    isActive = false    
+    )
+    println(student)
+    if (Student.isActive){
+        println("El estudiante ${student.name} esta activo")
+    }
+    else{
+        println("El estudiante ${student.name} no esta activo")
+    }
+    val status : String = if (student.isActive){
+        "Activo"
+    }
+    else{
+        "Inactivo"
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
