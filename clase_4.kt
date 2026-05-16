@@ -1,8 +1,10 @@
+///ejercicio 1
 //fun main (){
     val name = "jorge"
     println ("Hola $name")
 //}
-fun main() {
+///ejercicio 2
+//fun main() {
     val student = Student (
     id = 1,
     name = "Luis",
@@ -10,11 +12,33 @@ fun main() {
         
     )
     println(student)
+//}
+//data class Student (
+   // val id : Long,
+    //val name : String,
+    //val emal : String,
+    //val grade : int,
+    //val isActive : Boolean
+//)
+///ejercicio 3
+fun main() {
+    val student = Student (
+    id = 1,
+    name = "Luis",
+    emanil = "luisval@gmail.com"    
+    grade = 8,
+    isActive = true    
+    )
+    println(student)
+    if (Student.isActive){
+        println("El estudiante ${student.name} esta activo")
+    }
+    else{
+        println("El estudiante ${student.name} no esta activo")
+    }
 }
 data class Student (
     val id : Long,
     val name : String,
-    val emal : String,
-    val grade : int,
-    val isActive : Boolean
+    val emal : String
 )
