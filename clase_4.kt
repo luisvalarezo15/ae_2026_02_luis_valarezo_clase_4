@@ -203,6 +203,52 @@
     val isActive: Boolean
 //)
 //ejercicio 8
+//data class Student(
+    val id: Long,
+    val name: String,
+    val email: String,
+    val grade: Int,
+    val isActive: Boolean
+//)
+
+//fun main() {
+
+    val student1 = Student(
+        id = 1,
+        name = "Luis",
+        email = "luisval@gmail.com",
+        grade = 8,
+        isActive = true
+    )
+
+    val student2 = Student(
+        id = 2,
+        name = "Luisa",
+        email = "luisaval@gmail.com",
+        grade = 9,
+        isActive = true
+    )
+
+    val student3 = Student(
+        id = 3,
+        name = "Carlos",
+        email = "Carlosval@gmail.com",
+        grade = 4,
+        isActive = false
+    )
+
+    val students = listOf(student1, student2, student3)
+
+    println(students)
+
+    for (miVariable in students) {
+        if (miVariable.isActive) {
+            println("${miVariable.name} - ${miVariable.grade}")
+        }
+    }
+//}
+
+//ejercicio 9
 data class Student(
     val id: Long,
     val name: String,
@@ -246,9 +292,16 @@ fun main() {
             println("${miVariable.name} - ${miVariable.grade}")
         }
     }
+
+    val result = when (student1.grade) {
+        in 9..10 -> "Sobresaliente"
+        in 7..8 -> "Aprobado"
+        in 5..6 -> "Reprobado"
+        else -> "Nota invalida"
+    }
+
+    println("${student1.name}: $result")
 }
-
-
 
 
 
